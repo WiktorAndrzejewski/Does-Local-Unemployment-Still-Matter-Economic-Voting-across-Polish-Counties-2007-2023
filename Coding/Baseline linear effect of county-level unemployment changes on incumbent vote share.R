@@ -1,6 +1,8 @@
 library(ggplot2)
 library(marginaleffects)
 
+Final_Basic_Model <- lm(Vote_Share ~ Delta_Unemployment_Rate - 1, data = Data)
+
 # 1. Compute marginal predictions incorporating clustered SEs
 pred_baseline <- predictions(
   Final_Basic_Model,
